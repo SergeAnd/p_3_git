@@ -1,0 +1,46 @@
+git config --global init.defaultBranch main
+git init .
+mkdir folder
+vim folder/text.file
+git remote add origin git@github.com:SergeAnd/p_3_git.git
+git status
+git add .
+git status
+git commit -am "step 4"
+git push --set-upstream origin master
+git branch develop
+git checkout develop
+git push --set-upstream origin develop
+git checkout -b develop2 develop
+git branch
+vim folder/text.file 
+git commit -am "Step 7"
+git push
+git push --set-upstream origin develop2
+cd ..
+git clone git@github.com:SergeAnd/p_3_git.git
+git checkout -b develop3 origin/develop
+vim folder/text.file
+git status
+git add .
+git commit -am "step 10"
+git push --set-upstream origin develop3
+git switch develop
+git checkout master
+git pull
+git merge develop 
+git push
+cd ../p_3_git
+git checkout master
+git pull
+git merge develop 
+git merge develop3
+vim folder/text.file
+git commit -m "Resolved merge conflict by incorporating both suggestions."
+git add folder/text.file
+git merge --continue
+git push
+
+git add history.txt 
+git commit -am "add history file"
+git push
